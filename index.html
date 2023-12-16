@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+    <div id="mydiv"></div>
+
+<script  type="text/babel" src="./header.js"></script>
+<script  type="text/babel" src="./footer.js"></script>
+<script  type="text/babel" src="./sqr.js"></script>
+<script  type="text/babel" src="./add.js"></script>
+<script  type="text/babel" src="./reqres.js"></script>
+<script  type="text/babel" src="./json.js"></script>
+    <script type="text/babel">
+    	
+      
+      function Hello(){
+        return <>
+     
+        <Header/>
+        <Json />
+        <Reqres />
+        
+      {/*  the value of Header tag is it denote the Header function form header.js fie
+      */}
+
+        <Sqr x={5} />
+        <Sqr x={6}/>
+
+        <Add x={5} y={6} />
+        
+        <Footer/> 
+
+        </>;
+      
+      }
+        
+      
+      const container = document.getElementById('mydiv');
+      const root = ReactDOM.createRoot(container);
+      root.render(<Hello />)
+    </script>
+  </body>
+</html>
